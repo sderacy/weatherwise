@@ -1,6 +1,30 @@
 .App {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
   text-align: center;
 }
+
+.light {
+  --clr-bg: #fcfcfc;
+  --clr-bg-alt: #fff;
+  --clr-fg: #555;
+  --clr-fg-alt: #444;
+  --clr-primary: #2978b5;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark {
+  --clr-bg: #111111;
+  --clr-bg-alt: #2F2F2F;
+  --clr-fg: #F6F6F6;
+  --clr-fg-alt: #F6F6F6;
+  --clr-primary: #FFCb74;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -32,6 +56,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
