@@ -1,10 +1,13 @@
-.app {
+.background {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: var(--clr-fg);
   background-repeat: no-repeat;
   object-fit: contain;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dark {

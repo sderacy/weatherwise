@@ -5,12 +5,14 @@ import './App.css';
 
 function App() {
   return (
-    <div id='top' className={`dark app`} style={{
+    <div id='top' className={`dark background`} style={{
       background: `url(${process.env.PUBLIC_URL + '/background.jpg'}) no-repeat center center fixed`
     }}>
-      <Title />
-      <SearchBar />
-      <WeatherResults />
+      <main>
+        <Title />
+        <SearchBar />
+        <WeatherResults />
+      </main>
     </div>
   );
 }
