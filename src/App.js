@@ -4,7 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div id='top' className={`${themeName} app`}>
+    <div id='top' className={`dark app`} style={{
+      background: `url(${process.env.PUBLIC_URL + '/background.jpg'}) no-repeat center center fixed`
+    }}>
       <SearchBar />
       <WeatherResults />
     </div>
