@@ -1,14 +1,14 @@
 import SearchIcon from '@material-ui/icons/Search'
 import './SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = () =>
 
-  return (
-    <div className="search">
-      <input type="text" placeholder="Search.." className='field-search' />
-      <button type="submit" className='btn-search'><SearchIcon /></button>
-    </div>
-  )
-}
+(
+  <div className="search">
+    <input type="text" placeholder="Search.." className='field-search' />
+    <button type="submit" aria-label="Search for City Button" className='btn-search'><SearchIcon /></button>
+  </div>
+)
+
 
 export default SearchBar;
