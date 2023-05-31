@@ -1,4 +1,4 @@
-import WaterDropIcon from '@material-ui/icons/InvertColors';
+import { InvertColors as WaterDropIcon, ToggleOff, ToggleOn } from '@material-ui/icons';
 import './WeatherResults.css'
 
 let today = new Date().toLocaleDateString()
@@ -12,11 +12,12 @@ const WeatherResults = () => {
         <h6>{today}</h6>
       </div>
       <div id='temp' className='row'>
-        <h3>13&deg; C</h3>
+        <h3>75&deg; F</h3>
         <span> Stormy </span>
       </div>
       <div id='humidity' className='row'>
-        <span><WaterDropIcon /> 86%</span>
+        <span><WaterDropIcon id='icon-humid' /> 86%</span>
+        <span><ToggleOff id='icon-toggle' /> F/C</span>
       </div>
     </div>
   )

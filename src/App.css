@@ -2,7 +2,6 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: var(--clr-fg);
-  background-repeat: no-repeat;
   object-fit: contain;
   height: 100vh;
   display: flex;
@@ -21,7 +20,7 @@
 }
 
 main {
-  height: 65vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

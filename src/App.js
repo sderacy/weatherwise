@@ -5,7 +5,7 @@ import Header from './Components/Header/Header';
 function App() {
   return (
     <div id='top' className={`dark background`} style={{
-      background: `url(${process.env.PUBLIC_URL + '/background.jpg'}) no-repeat center center fixed`
+      background: `url(${process.env.PUBLIC_URL + '/background.jpg'}) center center repeat-y fixed`
     }}>
       <main>
         <Header />

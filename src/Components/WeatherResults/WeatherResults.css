@@ -1,6 +1,6 @@
 span {
   color: #555;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 .results-card {
@@ -9,7 +9,7 @@ span {
   margin: 0 auto;
   margin-top: 5%;
   padding: 1em 1.5em;
-  width: 70%;
+  width: 90%;
   border-radius: 3%;
   background-color: #e3e3e3;
   color: #000;
@@ -28,24 +28,40 @@ span {
 #location>h4,
 #location {
   color: #777;
+  font-weight: 300;
 }
 
 #temp {
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #temp>h3 {
   color: #000;
-  font-size: 2.5em;
+  font-size: 5em;
 }
 
 #humidity {
-  justify-content: baseline;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#humidity>span {
+  font-size: 0.9em;
 }
 
 #humidity>span>svg {
-  font-size: 1.5em;
-  align-items: center;
+  display: inline;
+  font-size: 1.6em;
+  position: relative;
+  top: 5px;
+}
+
+#humidity>span>#icon-toggle {
+  top: 6px;
+  transform: scale(1.6);
+  margin-right: 0.3em;
 }
