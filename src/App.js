@@ -1,7 +1,6 @@
-import Title from './Components/Title/Title';
-import SearchBar from './Components/SearchBar/SearchBar';
 import WeatherResults from './Components/WeatherResults/WeatherResults';
 import './App.css';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
@@ -9,8 +8,7 @@ function App() {
       background: `url(${process.env.PUBLIC_URL + '/background.jpg'}) no-repeat center center fixed`
     }}>
       <main>
-        <Title />
-        <SearchBar />
+        <Header />
         <WeatherResults />
       </main>
     </div>
