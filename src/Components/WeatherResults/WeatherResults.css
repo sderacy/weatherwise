@@ -60,7 +60,7 @@ span {
   top: 5px;
 }
 
-#humidity>span>#icon-toggle {
+#humidity>span:nth-child(2)>svg {
   top: 6px;
   transform: scale(1.6);
   margin-right: 0.3em;

@@ -14,8 +14,8 @@ const WeatherResults = () => (
       <span> Stormy </span>
     </div>
     <div id='humidity' className='row'>
-      <span><WaterDropIcon id='icon-humid' /> 86%</span>
-      <span><ToggleOff id='icon-toggle' /> F/C</span>
+      <span><WaterDropIcon /> 86%</span>
+      <span><ToggleOff /> F/C</span>
     </div>
   </div>
 )
