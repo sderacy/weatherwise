@@ -5,20 +5,19 @@ import './SearchBar.css'
 const SearchBar = ({ onInput }) => {
   const [input, setInput] = useState('');
 
+  const handleSearch = () => {
+    if (input.trim() !== '') {
+      onInput(input);
+    }
+  }
+
   const handleChange = (event) => {
     setInput(event.target.value);
   }
 
-  const handleSearch = () => {
-    onInput(input);
-  }
-
   const detectEnter = (event) => {
     if (event.key === "Enter") {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      document.getElementById("searchBtn").click();
+      handleSearch();
     }
   }
 

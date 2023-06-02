@@ -4,7 +4,7 @@ import WeatherResults from './Components/WeatherResults/WeatherResults';
 import './App.css';
 
 const App = () => {
-  const [searchBarInput, setSearchBarInput] = useState(null);
+  const [searchBarInput, setSearchBarInput] = useState('');
 
   const handleSearchInput = (input) => {
     setSearchBarInput(input);

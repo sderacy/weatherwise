@@ -36,7 +36,11 @@ const WeatherResults = ({ searchData }) => {
       if (!response.ok) {
         throw new Error('Failed to fetch weather data');
       }
+
       const data = await response.json();
+
+      setToggle(false)
+      setUnit('F')
       setTemp(data.current.temp_f);
       setSkyText(data.current.condition.text);
       setHumidity(data.current.humidity);
@@ -46,7 +50,7 @@ const WeatherResults = ({ searchData }) => {
   };
 
   useEffect(() => {
-    if (searchData != null) {
+    if (searchData !== '') {
       fetchWeatherData();
     }
   }, [searchData]);

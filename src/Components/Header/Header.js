@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import Title from "../Title/Title";
 
 const Header = ({ onSearchInput }) => {
-  const [searchInput, setSearchInput] = useState(null);
+  const [searchInput, setSearchInput] = useState('');
 
   const handleSearchInput = (input) => {
     setSearchInput(input);
