@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
-import { InvertColors as WaterDropIcon, ToggleOff, ToggleOn } from '@material-ui/icons';
-import './WeatherResults.css'
+import React, { useState } from 'react'
+import WeatherCard from '../WeatherCard/WeatherCard';
 
 const today = new Date().toLocaleDateString()
 
 const WeatherResults = () => {
-  const [toggle, setToggle] = useState();
+  const [temp, setTemp] = useState(75);
+  const [unit, setUnit] = useState("F");
+  const [toggle, setToggle] = useState(false)
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const oppositeUnit = unit === "C" ? "F" : "C";
+
+  const convert = () => {
+    if (unit === "C") {
+      const convertedTemp = temp * 1.8 + 32;
+      setTemp(Math.round(convertedTemp));
+      setUnit(oppositeUnit);
+      setToggle(!toggle)
+    }
+
+    if (unit === "F") {
+      const convertedTemp = ((temp - 32) * 5) / 9;
+      setTemp(Math.round(convertedTemp));
+      setUnit(oppositeUnit);
+      setToggle(!toggle)
+    }
   };
 
   return (
-    <div className='results-card'>
-      <div id='location' className='row'>
-        <h4>Ewing</h4>
-        <h6>{today}</h6>
-      </div>
-      <div id='temp' className='row'>
-        <h3>75&deg; F</h3>
-        <span> Stormy </span>
-      </div>
-      <div id='humidity' className='row'>
-        <span><WaterDropIcon /> 86%</span>
-        <button
-          type='button'
-          onClick={handleToggle}
-          aria-label='toggle F/C'
-        >
-          {toggle ? <ToggleOff /> : <ToggleOn />}
-          <span>F/C</span>
-        </button>
-      </div>
-    </div>
+    <WeatherCard
+      temp={temp}
+      unit={unit}
+      toggle={toggle}
+      convert={convert}
+      today={today}
+    />
   )
 }
 
