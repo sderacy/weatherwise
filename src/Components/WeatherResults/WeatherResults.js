@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import WeatherCard from '../WeatherCard/WeatherCard';
-import config from '../../config'
 
 const today = new Date().toLocaleDateString();
 
@@ -29,10 +28,13 @@ const WeatherResults = ({ searchData }) => {
     }
   };
 
+
+  // https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${searchData}&aqi=no
+  console.log('API_KEY', process.env.REACT_APP_API_KEY)
   const fetchWeatherData = async () => {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=${config.API_KEY}&q=${searchData}&aqi=no`
+        `url`
       );
       if (!response.ok) {
         throw new Error('Failed to fetch weather data');
