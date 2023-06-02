@@ -9,10 +9,10 @@ const WeatherCard = ({ temp, skyText, humidity, unit, toggle, convert, searchDat
     </div>
     <div id='temp' className='row'>
       <h3>{temp}&deg;{unit}</h3>
-      <span> Stormy {skyText}</span>
+      <span> {skyText}</span>
     </div>
     <div id='humidity' className='row'>
-      <span><WaterDropIcon /> 86% {humidity}%</span>
+      <span><WaterDropIcon /> {humidity}%</span>
       <button
         type='button'
         onClick={convert}

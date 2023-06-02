@@ -1,56 +1,56 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import WeatherCard from '../WeatherCard/WeatherCard';
+import config from '../../config'
 
-const today = new Date().toLocaleDateString()
+const today = new Date().toLocaleDateString();
 
 const WeatherResults = ({ searchData }) => {
-  const [temp, setTemp] = useState(75);
-  const [unit, setUnit] = useState("F");
-  const [toggle, setToggle] = useState(false)
+  const [temp, setTemp] = useState(0);
+  const [unit, setUnit] = useState('F');
+  const [toggle, setToggle] = useState(false);
+  const [skyText, setSkyText] = useState('Template');
+  const [humidity, setHumidity] = useState('0');
 
-  const oppositeUnit = unit === "C" ? "F" : "C";
+  const oppositeUnit = unit === 'C' ? 'F' : 'C';
 
   const convert = () => {
-    if (unit === "C") {
+    if (unit === 'C') {
       const convertedTemp = temp * 1.8 + 32;
       setTemp(Math.round(convertedTemp));
       setUnit(oppositeUnit);
-      setToggle(!toggle)
+      setToggle(!toggle);
     }
 
-    if (unit === "F") {
+    if (unit === 'F') {
       const convertedTemp = ((temp - 32) * 5) / 9;
       setTemp(Math.round(convertedTemp));
       setUnit(oppositeUnit);
-      setToggle(!toggle)
+      setToggle(!toggle);
     }
   };
 
-  console.log(searchData)
-
-  let skyText = ''
-  let humidity = ''
-
   const fetchWeatherData = async () => {
     try {
-      const response = await fetch('your-api-url');
+      const response = await fetch(
+        `https://api.weatherapi.com/v1/current.json?key=${config.API_KEY}&q=${searchData}&aqi=no`
+      );
       if (!response.ok) {
         throw new Error('Failed to fetch weather data');
       }
       const data = await response.json();
-      // Extract temperature data from the API response and set it in the state
-      setTemp(data.temp_f);
-      skyText = data.condition.text
-      humidity = data.humidity
+      setTemp(data.current.temp_f);
+      setSkyText(data.current.condition.text);
+      setHumidity(data.current.humidity);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    // Fetch weather data from API
-    fetchWeatherData();
-  }, []);
+    if (searchData != null) {
+      fetchWeatherData();
+    }
+  }, [searchData]);
 
   return (
     <WeatherCard
@@ -60,10 +60,10 @@ const WeatherResults = ({ searchData }) => {
       unit={unit}
       toggle={toggle}
       convert={convert}
-      searchData={searchData}
+      searchData={searchData || 'Texas'}
       today={today}
     />
-  )
-}
+  );
+};
 
 export default WeatherResults;
