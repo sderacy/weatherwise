@@ -60,8 +60,10 @@ span {
   top: 5px;
 }
 
-#humidity>span:nth-child(2)>svg {
+#humidity>button>svg {
+  position: relative;
   top: 6px;
   transform: scale(1.6);
-  margin-right: 0.3em;
+  margin-right: 0.5em;
+  color: #555;
 }
