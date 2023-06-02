@@ -13,14 +13,15 @@ input[type=text] {
   padding: 5px;
   border-radius: 5px 0 0 5px;
   outline: none;
+  color: var(--searchbar-color)
 }
 
 input[type=text]::placeholder {
-  color: #000;
+  color: #555;
 }
 
 input[type=text]:focus {
-  color: #000;
+  color: var(--searchbar-color)
 }
 
 .btn-search {

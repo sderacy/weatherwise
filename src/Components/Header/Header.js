@@ -1,13 +1,22 @@
+import React, { useState } from 'react'
 import SearchBar from "../SearchBar/SearchBar";
 import Title from "../Title/Title";
 
-const Header = () =>
-(
-  <header>
-    <Title />
-    <SearchBar />
-  </header>
-);
+const Header = ({ onSearchInput }) => {
+  const [searchInput, setSearchInput] = useState(null);
+
+  const handleSearchInput = (input) => {
+    setSearchInput(input);
+    onSearchInput(searchInput)
+  };
+
+  return (
+    <header>
+      <Title />
+      <SearchBar onInput={handleSearchInput} />
+    </header>
+  )
+};
 
 
 export default Header;
