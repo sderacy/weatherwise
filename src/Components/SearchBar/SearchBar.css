@@ -37,3 +37,8 @@ input[type=text]:focus {
   align-items: center;
   justify-content: center;
 }
+
+.btn-search:hover {
+  background-color: var(--clr-fg);
+  color: var(--searchbar-color);
+}
