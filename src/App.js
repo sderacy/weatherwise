@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div id='top' className='dark background' style={{
-      background: `url('${process.env.PUBLIC_URL}/background.jpg') center center repeat-y fixed`
+      backgroundImage: `url('${process.env.PUBLIC_URL}/background.jpg')`
     }}>
       <main>
         <Header onSearchInput={handleSearchInput} />
