@@ -3,6 +3,7 @@
   line-height: 1.5;
   color: var(--clr-fg);
   height: 100vh;
+  padding: 2%;
   background-size: cover;
   display: flex;
   justify-content: center;
