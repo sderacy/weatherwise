@@ -7,7 +7,7 @@
 
 input[type=text] {
   width: 90%;
-  background-color: #fff;
+  background-color: var(--clr-fg);
   border: 3px solid var(--searchbar-color);
   border-right: none;
   padding: 5px;
@@ -29,7 +29,7 @@ input[type=text]:focus {
   border: 1px solid var(--searchbar-color);
   background: var(--searchbar-color);
   text-align: center;
-  color: #fff;
+  color: var(--clr-fg);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
