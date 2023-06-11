@@ -6,8 +6,11 @@ const Header = ({ onSearchInput }) => {
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearchInput = (input) => {
-    setSearchInput(input);
-    onSearchInput(searchInput)
+    setSearchInput(input)
+
+    // searchInput isn't used here because it's faster to pass the state 
+    // directly instead of using the searchInput variable. 
+    onSearchInput(input)
   };
 
   return (
