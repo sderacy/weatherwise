@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import Header from './Header'
 
-test('Header renders correctly and handles search input', () => {
+it('renders header correctly and handles search input', () => {
   // Create a mock function for the onSearchInput callback
   const onSearchInput = jest.fn()
 
