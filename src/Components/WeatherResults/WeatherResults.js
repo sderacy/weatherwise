@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import WeatherCard from '../WeatherCard/WeatherCard'
 
-const today = new Date().toLocaleDateString()
-
 const WeatherResults = ({ searchData }) => {
   const [temp, setTemp] = useState(65)
   const [unit, setUnit] = useState('F')
   const [toggle, setToggle] = useState(false)
   const [skyText, setSkyText] = useState('Cloudy')
   const [humidity, setHumidity] = useState('17')
+
+  const date = new Date()
+  const options = { month: '2-digit', day: '2-digit', year: 'numeric' }
+  const today = date.toLocaleDateString('en-US', options).replace(/\//g, '-')
 
   const oppositeUnit = unit === 'C' ? 'F' : 'C'
 
