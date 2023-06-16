@@ -24,6 +24,7 @@ const SearchBar = ({ onInput }) => {
   return (
     <div className='search'>
       <input
+        data-testid='searchField'
         id='searchField'
         type='text'
         placeholder='City (e.g. Ewing)'
@@ -33,6 +34,7 @@ const SearchBar = ({ onInput }) => {
         onKeyUp={detectEnter}
       />
       <button
+        data-testid='searchBtn'
         id='searchBtn'
         type='submit'
         aria-label='Search for City Button'

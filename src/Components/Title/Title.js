@@ -1,5 +1,5 @@
 import './Title.css'
 
-const Title = () => <h1 id='title'>Weather Wise</h1>
+const Title = () => <h1 data-testid='title'>Weather Wise</h1>
 
 export default Title
