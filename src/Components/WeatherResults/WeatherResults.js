@@ -41,7 +41,7 @@ const WeatherResults = ({ searchData }) => {
 
       setToggle(false)
       setUnit('F')
-      setTemp(data.current.temp_f);
+      setTemp(Math.round(data.current.temp_f));
       setSkyText(data.current.condition.text);
       setHumidity(data.current.humidity);
     } catch (error) {
