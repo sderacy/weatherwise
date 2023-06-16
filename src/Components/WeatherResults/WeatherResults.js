@@ -4,11 +4,11 @@ import WeatherCard from '../WeatherCard/WeatherCard';
 const today = new Date().toLocaleDateString();
 
 const WeatherResults = ({ searchData }) => {
-  const [temp, setTemp] = useState(0);
+  const [temp, setTemp] = useState(65);
   const [unit, setUnit] = useState('F');
   const [toggle, setToggle] = useState(false);
-  const [skyText, setSkyText] = useState('Template');
-  const [humidity, setHumidity] = useState('0');
+  const [skyText, setSkyText] = useState('Cloudy');
+  const [humidity, setHumidity] = useState('17');
 
   const oppositeUnit = unit === 'C' ? 'F' : 'C';
 
@@ -63,7 +63,7 @@ const WeatherResults = ({ searchData }) => {
       unit={unit}
       toggle={toggle}
       convert={convert}
-      searchData={searchData || 'Texas'}
+      searchData={searchData || 'Trenton'}
       today={today}
     />
   );
