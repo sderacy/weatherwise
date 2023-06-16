@@ -5,7 +5,7 @@
   --searchbar-color: #181b1c;
 }
 
-input[type=text] {
+input[type='text'] {
   width: 90%;
   background-color: var(--clr-fg);
   border: 3px solid var(--searchbar-color);
@@ -13,15 +13,15 @@ input[type=text] {
   padding: 5px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: var(--searchbar-color)
+  color: var(--searchbar-color);
 }
 
-input[type=text]::placeholder {
+input[type='text']::placeholder {
   color: #555;
 }
 
-input[type=text]:focus {
-  color: var(--searchbar-color)
+input[type='text']:focus {
+  color: var(--searchbar-color);
 }
 
 .btn-search {

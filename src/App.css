@@ -13,9 +13,9 @@
 .dark {
   --clr-bg: #181b1c;
   --clr-bg-alt: #414141;
-  --clr-fg: #F6F6F6;
-  --clr-fg-alt: #F6F6F6;
-  --clr-primary: #FFCb74;
+  --clr-fg: #f6f6f6;
+  --clr-fg-alt: #f6f6f6;
+  --clr-primary: #ffcb74;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
