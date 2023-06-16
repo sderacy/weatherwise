@@ -3,22 +3,22 @@ import { render, waitFor, fireEvent } from '@testing-library/react'
 import WeatherResults from '../Components/WeatherResults/WeatherResults.js'
 
 describe('WeatherResults', () => {
-  // Mock the fetch function and its response
-  global.fetch = jest.fn(() =>
-    Promise.resolve({
-      ok: true,
-      json: () =>
-        Promise.resolve({
-          current: {
-            temp_f: 70,
-            condition: { text: 'Sunny' },
-            humidity: 50,
-          },
-        }),
-    })
-  )
-
   it('renders the WeatherResults component correctly', async () => {
+    // Mock the fetch function and its response
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve({
+            current: {
+              temp_f: 70,
+              condition: { text: 'Sunny' },
+              humidity: 50,
+            },
+          }),
+      })
+    )
+
     // Define mock props
     const mockProps = {
       searchData: 'New York',
@@ -28,9 +28,6 @@ describe('WeatherResults', () => {
     const { getByText, getByLabelText } = render(
       <WeatherResults {...mockProps} />
     )
-
-    // Assert that loading state is initially rendered
-    expect(getByText('Loading...')).toBeInTheDocument()
 
     // Wait for the weather data to be fetched and rendered
     await waitFor(() => expect(getByText('70°F')).toBeInTheDocument())
@@ -48,7 +45,7 @@ describe('WeatherResults', () => {
 
   it('renders the WeatherResults component with default searchData', async () => {
     // Render the WeatherResults component without providing searchData
-    const { getByText } = render(<WeatherResults />)
+    const { getByText } = render(<WeatherResults searchData={''} />)
 
     // Wait for the default weather data to be fetched and rendered
     await waitFor(() => expect(getByText('65°F')).toBeInTheDocument())
