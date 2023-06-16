@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import WeatherCard from './WeatherCard'
+import WeatherCard from '../Components/WeatherCard/WeatherCard.js'
 
 describe('WeatherCard', () => {
   it('renders the WeatherCard component correctly', () => {

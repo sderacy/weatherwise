@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, waitFor, fireEvent } from '@testing-library/react'
-import WeatherResults from './WeatherResults'
+import WeatherResults from '../Components/WeatherResults/WeatherResults.js'
 
 describe('WeatherResults', () => {
   // Mock the fetch function and its response

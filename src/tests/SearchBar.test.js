@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import SearchBar from './SearchBar'
+import SearchBar from '../Components/SearchBar/SearchBar.js'
 
 describe('SearchBar', () => {
   it('calls onInput function with the input value on search button click', () => {

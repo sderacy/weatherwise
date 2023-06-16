@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import Header from './Header'
+import Header from '../Components/Header/Header.js'
 
 describe('Header', () => {
   it('renders header correctly and handles search input', () => {
