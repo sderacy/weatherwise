@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Title from './Title'
 
-it('should render the title correctly', () => {
+it('renders the title correctly', () => {
   // Render the Title component
   const { getByTestId } = render(<Title />)
 
