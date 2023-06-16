@@ -37,6 +37,7 @@ span {
   justify-items: center;
   margin-top: 1em;
   margin-bottom: 1em;
+  background-color: transparent;
 }
 
 #temp>h3 {
